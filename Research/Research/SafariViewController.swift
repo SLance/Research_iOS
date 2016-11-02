@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
+class SafariViewController: BaseViewController, SFSafariViewControllerDelegate {
 
     let button = UIButton(type: .system)
     
