@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import AssetsLibrary
 
 class PhotoMetadataController: BaseViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -47,17 +48,32 @@ class PhotoMetadataController: BaseViewController, UINavigationControllerDelegat
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let assetURL = info[UIImagePickerControllerReferenceURL] as! URL
-        let assets = PHAsset.fetchAssets(withALAssetURLs: [assetURL], options: nil)
-        let asset = assets.firstObject!
-        
-        asset.requestContentEditingInput(with: nil) { (contentEditingInput, info) in
-            let fullImage = CIImage(contentsOf: (contentEditingInput?.fullSizeImageURL)!)
+
+        if UIDevice.current.systemVersion.compare("9.0", options: .numeric) == .orderedAscending {
+            if (picker.sourceType != .camera) {
+                // 图片是从相册所选，否则url不能使用
+                ALAssetsLibrary().asset(for: assetURL, resultBlock: { (asset) in
+                    let metadata = asset!.defaultRepresentation().metadata()!
+                    let alertController = UIAlertController(title: nil, message: "\(metadata)", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+                    picker.present(alertController, animated: true, completion: nil)
+                }, failureBlock: { (error) in
+                    print("\(error)")
+                })
+            }
+        } else {
+            let assets = PHAsset.fetchAssets(withALAssetURLs: [assetURL], options: nil)
+            let asset = assets.firstObject!
             
-            let metadata = fullImage?.properties
-            
-            let alertController = UIAlertController(title: nil, message: "\(metadata)", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
-            picker.present(alertController, animated: true, completion: nil)
+            asset.requestContentEditingInput(with: nil) { (contentEditingInput, info) in
+                let fullImage = CIImage(contentsOf: (contentEditingInput?.fullSizeImageURL)!)
+                
+                let metadata = fullImage?.properties
+                
+                let alertController = UIAlertController(title: nil, message: "\(metadata)", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+                picker.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     
