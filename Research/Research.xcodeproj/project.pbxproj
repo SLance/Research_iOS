@@ -255,8 +255,7 @@
 				TargetAttributes = {
 					7E8138E51DC847D4001852F5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ZZG7HSB6RX;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -601,7 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZZG7HSB6RX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Research/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lance.labs.Research;
@@ -616,7 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZZG7HSB6RX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Research/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lance.labs.Research;
