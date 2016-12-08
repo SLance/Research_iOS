@@ -12,7 +12,7 @@ class MainViewController: UITableViewController {
     
     let cellIdentifier = "defaultIdentifier"
     
-    var dataSource = ["SFSafariViewController", "Metadata of PhotoLibrary"]
+    var dataSource = ["SFSafariViewController", "Metadata of PhotoLibrary", "RunLoop"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,9 @@ class MainViewController: UITableViewController {
             break;
         case 1:
             self.navigationController?.pushViewController(PhotoMetadataController(), animated: true)
+            break;
+        case 2:
+            self.navigationController?.pushViewController(RunLoopController(), animated: true)
             break;
         default:
             break;

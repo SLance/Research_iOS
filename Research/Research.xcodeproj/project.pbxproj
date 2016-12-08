@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E11AACB1DD307D600DB7F7A /* RunLoopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11AACA1DD307D600DB7F7A /* RunLoopController.swift */; };
 		7E4368C91DC8A3D1004A4727 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4368C81DC8A3D1004A4727 /* SafariViewController.swift */; };
 		7E8138EA1DC847D4001852F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8138E91DC847D4001852F5 /* AppDelegate.swift */; };
 		7E8138F11DC847D4001852F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8138F01DC847D4001852F5 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		566267374824FC22E9937E1D /* Pods-ResearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResearchTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ResearchTests/Pods-ResearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CBD9C2957D14E3B962BCFA1 /* Pods_ResearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E11AACA1DD307D600DB7F7A /* RunLoopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopController.swift; sourceTree = "<group>"; };
 		7E4368C81DC8A3D1004A4727 /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		7E8138E61DC847D4001852F5 /* Research.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Research.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8138E91DC847D4001852F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7E842A241DC9977F00E2CCC9 /* BaseViewController.swift */,
 				7E4368C81DC8A3D1004A4727 /* SafariViewController.swift */,
 				7E842A281DC9993D00E2CCC9 /* PhotoMetadataController.swift */,
+				7E11AACA1DD307D600DB7F7A /* RunLoopController.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				TargetAttributes = {
 					7E8138E51DC847D4001852F5 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -453,6 +457,7 @@
 				7E8138EA1DC847D4001852F5 /* AppDelegate.swift in Sources */,
 				7E842A251DC9977F00E2CCC9 /* BaseViewController.swift in Sources */,
 				7E842A291DC9993D00E2CCC9 /* PhotoMetadataController.swift in Sources */,
+				7E11AACB1DD307D600DB7F7A /* RunLoopController.swift in Sources */,
 				7E4368C91DC8A3D1004A4727 /* SafariViewController.swift in Sources */,
 				7E82C9351DC89413007A25A4 /* MainViewController.swift in Sources */,
 			);
